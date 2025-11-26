@@ -205,3 +205,4 @@ The project is delivered as source code, ready to:
 
 All requirements from the task specification have been implemented, including the bonus KMP + iOS implementation.
 
+
