@@ -1,11 +1,19 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.compiler)
 }
 
+android {
+    namespace = "com.starwarsapp.shared"
+    compileSdk = 35
+}
+
 kotlin {
+    applyDefaultHierarchyTemplate()
+    
     androidTarget {
         compilations.all {
             compileTaskProvider.configure {
@@ -41,23 +49,10 @@ kotlin {
             }
         }
         
-        val iosMain by creating {
-            dependsOn(commonMain)
+        val iosMain by getting {
             dependencies {
                 implementation(libs.ktor.client.ios)
             }
-        }
-        
-        val iosX64Main by getting {
-            dependsOn(iosMain)
-        }
-        
-        val iosArm64Main by getting {
-            dependsOn(iosMain)
-        }
-        
-        val iosSimulatorArm64Main by getting {
-            dependsOn(iosMain)
         }
     }
 }
