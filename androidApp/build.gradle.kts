@@ -59,7 +59,7 @@ android {
 dependencies {
     implementation(project(":shared"))
     
-    implementation(compose.bom(libs.compose.bom))
+    implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.foundation)

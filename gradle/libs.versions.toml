@@ -1,10 +1,10 @@
 [versions]
 kotlin = "2.0.21"
-compose = "1.7.0"
+compose = "2024.12.00"
 ktor = "3.0.3"
 coroutines = "1.9.0"
 androidGradlePlugin = "8.7.3"
-composeCompiler = "1.5.15"
+composeCompiler = "2.0.21"
 lifecycle = "2.8.6"
 koin = "3.5.6"
 
@@ -37,6 +37,7 @@ koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", versi
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "composeCompiler" }
